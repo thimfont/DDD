@@ -1,42 +1,42 @@
 package payment.domain.entidades;
 
+import payment.domain.valueobject.Documento;
+import payment.domain.valueobject.Email;
+import payment.domain.valueobject.Endereco;
+import payment.domain.valueobject.Nome;
+import payment.shared.Entidade;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Aluno {
-    private String nome;
-    private String sobrenome;
-    private String documento;
-    private String email;
-    private String endereco;
+public class Aluno extends Entidade {
+    private Nome nome;
+    private Documento documento;
+    private Email email;
+    private Endereco endereco;
     private List<Assinatura> assinaturas;
 
-    public Aluno(String nome, String sobrenome, String documento, String email) {
+    public Aluno(Nome nome, Documento documento, Email email) {
         this.nome = nome;
-        this.sobrenome = sobrenome;
         this.documento = documento;
         this.email = email;
         this.assinaturas = new ArrayList<>();
     }
 
-    public String getNome() {
+    public Nome getNome() {
         return nome;
     }
 
-    public String getSobrenome() {
-        return sobrenome;
-    }
-
-    public String getDocumento() {
+    public Documento getDocumento() {
         return documento;
     }
 
-    public String getEmail() {
+    public Email getEmail() {
         return email;
     }
 
-    public String getEndereco() {
+    public Endereco getEndereco() {
         return endereco;
     }
 
